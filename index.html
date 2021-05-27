@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dante Astronomia</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script> MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };</script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="p5/p5.js"></script>
+    <script src="p5/addons/p5.dom.js"></script>
+
+    <script src="simulations/sim12.js"></script>
+    <script src="simulations/sim3.js"></script>
+    <script src="simulations/planet.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <img src="" id="bgImage">
+
+    <div id="container">
+
+        <a id="page_prev" class="prev" onclick="plusSlides(-1)">←</a>
+        <a id="page_next" class="next" onclick="plusSlides(1)">→</a>
+
+        <div class="float slide">
+            <div class="float section title">
+                INTRODUZIONE
+            </div>
+            <div class="float section">
+                <span>
+                    Sebbene l'astronomia moderna, così come la comunicazione scientifica
+                    moderna siano nate con Galileo Galilei nel secolo della Rivoluzione
+                    Scientifica, già Dante nel Convivio aveva ipotizzato che la letteratura,
+                    e in generale la poesia, potesse essere il mezzo di divulgazione scientifica
+                    per eccellenza. E infatti, nella Commedia abbiamo riferimenti a tutti i campi
+                    della cultura medioevale, di cui Dante conosceva i più intimi segreti.
+                    Vedremo, di seguito, quali riferimenti al campo dell'astronomia sono presenti
+                    nell'intramontabile opera del Sommo Poeta, insieme alla valenza che possono avere
+                    al giorno d'oggi, dopo otto secoli di progresso scientifico.
+                </span>
+                <span>
+                    Il viaggio di Dante inizia nella notte del Venerdì Santo del 1300. Il Poeta è al
+                    culmine della carriera politica, ma non è felice: infatti, la Commedia si apre nella
+                    "selva oscura". Dante non riesce a distinguere il bene dal male, e vive di angoscia e
+                    sensi di colpa. Passata la notte, finalmente possiamo ammirare l'alba, e incontriamo il
+                    primo riferimento astronomico:<br>
+                </span>
+                <p class="cit">
+                    Temp'era dal principio del mattino,<br>
+                    e 'l sol montava 'n su' con quelle stelle<br>
+                    ch'eran con lui quando l'amor divino<br><br>
+                    mosse di prima quelle cose belle<br>
+                </p>
+                <p class="ref">[Inferno, I, vv 37-40]</p>
+                <div class="rowflexbox">
+                    <span>
+                        Il Sole è sorto in Ariete, e la costellazione di Orione è ancora visibile. Le costellazioni,
+                        soprattutto nella cantica dell'Inferno, sono utilizzate per fornire a indicazioni temporali,
+                        dal momento che il posto è del tutto privo di luce ed è molto facile smarrire la concezione
+                        del tempo. Per quanto riguarda il Purgatorio e il Paradiso, le stelle, le costellazioni e i
+                        pianeti assumono in essi numerosi significati derivabili da interpretazioni di livello maggiore
+                        rispetto all'interpretazione letterale. Ad esempio, Beatrice riuscirà a spiegare sul piano
+                        metafisico
+                        le macchie lunari (odiernamente, i mari), confutando le tesi di Dante.<br><br>
+                    </span>
+                    <img src="Other/Aries.jpg" style="width:20%; margin-left:30px"><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="float slide">
+            <div class="float section title">
+                INFERNO
+            </div>
+            <div class="float section">
+                <span>
+                    Nel canto XI veniamo a conoscenza che mancano due ore all'alba, e quindi sono le
+                    quattro del mattino. Infatti, la costellazione dei Pesci sta spuntando all'orizzonte. Inoltre,
+                    la costellazione del Grande Carro sta tramontando a Nord-Est (indicato con il Coro, ossia il
+                    Maestrale).
+                </span>
+                <p class="cit">
+                    Ma seguimi oramai, che ’l gir mi piace;<br><br>
+                    ché i Pesci guizzan su per l’orizzonta,<br>
+                    e ’l Carro tutto sovra ’l Coro giace,<br>
+                    e ’l balzo via là oltra si dismonta»<br>
+                </p>
+                <p class="ref">[Inferno, XI, vv 112-115]</p>
+                <span>
+                    Nel canto XX, Virgilio fa notare a Dante che la notte del giorno precedente la luna è stata piena.
+                    Per
+                    cui,
+                    dal momento che siamo all'equinozio di primavera, sono le 18. A partire dal giorno successivo, la
+                    Luna
+                    sorgerà sempre più tardi. Dante dovrebbe ricordarselo, visto che il plenilunio gli è stato
+                    fondamentale
+                    per
+                    orientarsi nella selva.
+                </span>
+                <p class="cit">
+                    Ma vienne omai, ché già tiene ’l confine<br>
+                    d’amendue li emisperi e tocca l’onda<br>
+                    sotto Sobilia Caino e le spine;<br><br>
+                    e già iernotte fu la luna tonda:<br>
+                    ben ten de’ ricordar, ché non ti nocque<br>
+                    alcuna volta per la selva fonda».<br><br>
+                    Sì mi parlava, e andavamo introcque.<br>
+                </p>
+                <p class="ref">[Inferno, XX, vv 124-130]</p>
+                <span>
+                    Ma la figura legata all'Inferno dantesco e alla navigazione non può che essere una: Ulisse.<br>
+                    Il suo racconto ci porta ai limiti dell'Universo conosciuto all'epoca di Dante. Ulisse, non
+                    soddisfatto dopo essere tornato in patria, intraprende un nuovo viaggio con i suoi più fidi
+                    compagni,
+                    e si dirige verso le colonne d'Ercole con l'intento di superarle. Una volta fatto ciò, il viaggio
+                    non si ferma, ma continua in mare aperto, finché non intravede una mmontagna, prima che 'l mar sovra
+                    lui si richiuda. Il racconto di Ulisse, ottenuto grazie alla mediazione di Virgilio, comincia al
+                    verso
+                    90 e prosegue fino alla fine del canto. Ecco il suo "folle volo":<br><br>
+                </span>
+                <div class="flexbox">
+                    <video src="Other/Follw Volo cut.mp4" controls></video><br>
+                </div>
+                <span>
+                    Com'è possibile notare, Ulisse non avrebbe mai potuto compiere un viaggio del genere realmente, in
+                    quanto
+                    si sarebbe dovuto imbattere nelle coste dell'America Centrale prima di giungere agli antipodi di
+                    Gerusalemme,
+                    di cui Dante non era a conoscenza.<br>
+                    Dopo aver superato le colonne d'Ercole, Ulisse racconta che:
+                </span>
+                <p class="cit">
+                    Tutte le stelle già de l'altro polo<br>
+                    vedea la notte e 'l nostro tanto basso,<br>
+                    che non surgea fuor del marin suolo.<br>
+                </p>
+                <p class="ref">[Inferno, XXVI, vv 127-129]</p>
+                <span>
+                    Tutte le stelle del nostro cielo (quello dell'emisfero boreale) erano talmente basse che non
+                    riuscivano
+                    a spuntare dall'orizzonte. Questa affermazione è astronomicamente corretta. Le stelle del nostro
+                    cielo
+                    cui
+                    Ulisse si riferisce sono le stelle circumpolari, ossia quelle stelle che distano dal polo nord
+                    celeste
+                    più
+                    della latitudine del punto di osservazione.<br><br>
+                </span>
+                <div class="flexbox">
+                    <img src="Other/Circumpolar_rotation_thuban_north_star.gif" style="width:50%"><br>
+                </div>
+                <span>
+                    A Firenze, la latitudine è di circa 44°N, e la calotta delle
+                    stelle circumpolari comprende il Grande e il Piccolo Carro e Cassiopea. Essendo la montagna del
+                    Purgatorio
+                    agli
+                    antipodi di Gerusalemme, la sua latitudine è di 32°S, e chiaramente le Stelle circumpolari non sono
+                    visibili.<br>
+                    Osservando il cielo, Ulisse trae altre considerazioni:
+                </span>
+                <p class="cit">
+                    Cinque volte racceso e tante casso<br>
+                    lo lume era di sotto da la luna,<br>
+                    poi che 'ntrati eravam ne l'alto passo,<br><br>
+                    quando n'apparve una montagna, bruna<br>
+                    per la distanza, e parvemi alta tanto<br>
+                    quanto veduta non avea alcuna.<br><br>
+                </p>
+                <p class="ref">[Inferno, XXVI, vv 130-135]</p>
+                <span>
+                    Ulisse si rende conto che dalla loro partenza dalle colonne d'Ercole sono passati cinque mesi,
+                    quando
+                    finalmente
+                    si intravede la montagna del Purgatorio. La formula per calcolare la distanza di due punti su una
+                    sfera
+                    è:
+
+                    \begin{equation}
+                    d(P,Q) = R · arccos(cos\Delta\phi·cos\theta_P·cos\theta_Q+sin\theta_P·sin\theta_Q)
+                    \end{equation}
+
+                    Dove R è il raggio della terrra (6371km), &phi; è la longitudine, &theta; è la latitudine.
+                    Con i dati a nostra disposizione (Colonne d'Ercole 35,972°N 5,486°W;
+                    Antipodi di Gerusalemme 31,796°S 144,788°W), calcoliamo che la distanza totale percorsa da Ulisse
+                    è
+                    di:<br>
+
+                    \begin{equation}
+                    d = 16275.016km
+                    \end{equation}
+
+                    La velocità media della nave, dunque, dovrà essere di:
+
+                    \begin{equation}
+                    v = \frac{d}{t} = \frac{16275.016km}{5·29.5·24h} = 4.5 \frac{km}{h}
+                    \end{equation}
+
+                    Dal momento che la velocità di una nave greca si aggirava tra i 10 e i 12 km/h, Ulisse si stava
+                    addirittura contenendo. Non avrà voluto rischiare in acque così ignote.
+                </span>
+                <p id="connect" class="cit">...e quindi uscimmo a riveder le stelle.</p>
+            </div>
+        </div>
+
+        <div class="float slide">
+            <div class="float section title">
+                PURGATORIO
+            </div>
+            <div class="float section">
+                <span>
+                    Una volta attraversata la natural burella, Dante esordisce la cantica del Purgatorio con una
+                    descrizione
+                    del cielo:
+                </span>
+                <p class="cit">
+                    Lo bel pianeto che d'amar conforta<br>
+                    faceva tutto rider l'oriente,<br>
+                    velando i Pesci ch'erano in sua scorta.<br>
+                </p>
+                <p class="ref">[Purgatorio, I, vv 19-21]</p>
+                <br>
+                <div class="rowflexbox">
+                    <div>
+                        <span>
+                            Il fatto che la costellazione dei Pesci sia visibile non è casuale. Nell'emisfero boreale,
+                            infatti,
+                            se il Sole è in Ariete, allora sorge prima dei Pesci e ne impedisce la vista, ma
+                            nell'emisfero
+                            australe ciò non succede. Tuttavia, la costellazione è nascosta lo stesso da Venere, "lo bel
+                            pianeta"
+                            che illumina tutto l'Oriente. Un'altra cosa, però, cattura l'attenzione del nostro eroe. Più
+                            avanti,
+                            scopriamo che:
+                        </span>
+                        <p class="cit">
+                            Com'io da loro sguardo fui partito,<br>
+                            un poco me volgendo a l'altro polo,<br>
+                            là onde il Carro già era sparito<br>
+                        </p>
+                        <p class="ref">[Purgatorio, I, vv 28-30]</p>
+                        <span>
+                            Proprio come successo prima ad Ulisse, il Grande Carro, costellazione circumpolare
+                            nell'emisfero
+                            boreale,
+                            adesso è sparita.
+                        </span>
+                    </div>
+                    <img src="Other/Pesci.jpg" style="width:25%; margin-left:30px">
+                </div><br>
+                <span>Infatti, le terzine successive recitano:</span>
+                <p class="cit">
+                    I' mi volsi poi a man destr, e puosi mente<br>
+                    a l'altro polo, e vidi quattro stelle<br>
+                    non viste mai fuor ch'a la prima gente.<br><br>
+                    Goder pareva 'l ciel di lor fiammelle:<br>
+                    oh settentrional vedovo sito,<br>
+                    poi che privato se' di mirar quelle!<br><br>
+                </p>
+                <p class="ref">[Purgatorio, I, vv 22-27]</p>
+                <span>
+                    Ad un intellettuale del Medioevo comune, che non raggiungeva il livello di cultura del Sommo, la
+                    descrizione
+                    di quattro stelle
+                    è solo un arguta metafora per rappresentare le quattro virtù alle quali le anime del Purgatorio
+                    tendono.
+                    Tuttavia, per noi del
+                    ventunesimo secolo, parlare di quattro stelle nell'emisfero australe non è che una banalità. La
+                    costellazione che in questo momento
+                    costituisce il polo sud celeste non è altro che la Croce del Sud, formata proprio da quattro stelle.
+                    Com'è
+                    possibile che Dante, un
+                    toscano che viveva a 44°N di latitudine, sapesse dell'esistenza della costellazione?<br><br>
+                    Una prima ipotesi suggerisce che questo sia solo un eclatante colpo di fortuna, ma non è così.<br>
+                    Le stelle della Croce del Sud erano state osservate per la prima volta da Tolomeo nel I secolo, che
+                    le
+                    annotò nel suo catalogo.
+                    Quest'ultimo avrebbe contenuto tutte le stelle al di sopra dei 60°S di latitudine, ma la Croce del
+                    Sud
+                    in
+                    questo momento si trova a
+                    latitudini minori. Tolomeo riuscì ad osservare la costellazione grazie al fenomeno della precessione
+                    degli
+                    equinozi, scoperto da Ipparco
+                    da Nicea nel II sec a.C. A causa di questo fenomeno, dovuto all'attrazione gravitazionale combinata
+                    della
+                    Luna e del Sole, l'inclinazione
+                    dell'asse terrestre cambia continuamente, descrivendo nell'arco di tempo di 25772 anni un doppio
+                    cono
+                    con
+                    centro nel centro della Terra, e
+                    spostando di conseguenza la volta celeste (tra circa 12886 anni, infatti, il polo nord celeste verrà
+                    indicato da Vega e non più dalla Stella
+                    Polare).<br><br>
+                </span>
+                <div class="flexbox">
+                    <img src="Other/Precessing-earth.gif" style="width:50%"><br>
+                </div>
+                <span>
+                    Per questo motivo, la costellazione della Croce del Sud era gradualmente sparita dalla memoria
+                    collettiva, e
+                    fu solo nel 1679, con le
+                    scoperte geografiche, che Andrea Corsari individuò nuovamente la costellazione, dandole il nome che
+                    ha
+                    tutt'oggi. Dante, seppur vissuto nel
+                    periodo in cui la costellazione non era né visibile né riscoperta, è riuscito citarla nella Commedia
+                    proprio
+                    grazie alla conoscenza dei moti
+                    millenari della Terra.<br><br>
+                    La precessione non è tuttavia una caratteristica particolare del pianeta Terra, né dei pianeti in
+                    generale.
+                    Ogni corpo che ruota, soggetto ad
+                    una coppia di forze, va incontro al fenomeno di precessione. Le due forze, infatti, agendo in punti
+                    diversi
+                    del corpo, generano una variazione
+                    del momento angolare, e di conseguenza una variazione dell'asse di rotazione.<br><br>
+                </span>
+                <div class="rowflexbox">
+                    <img src="Other/Precessing-top.gif" style="width:50%">
+                    <img src="Other/PrecessionOfATop.svg.png" style="width:32%">
+                </div><br>
+                <span>Possiamo trovare un altro velato riferimento al moto di precessione nel canto XI:</span>
+                <p class="cit">
+                    Che voce avrai tu più, se vecchia scindi<br>
+                    de te la carne, che se fossi morto<br>
+                    anzi che tu lasciassi il 'pappo' e 'l 'dindi',<br><br>
+                    pria che passin mill'anni? ch'è più corto<br>
+                    spazio a l'etterno, ch'un muover di ciglia<br>
+                    al cerchio che più tardi in cielo è torto<br><br>
+                </p>
+                <p class="ref">[Purgatorio, XI, vv 103-108]</p>
+                <span>
+                    Da una riflessione sul fatto che il tempo impiegato da un uomo a passare dall'età infantile alla
+                    vecchiaia è
+                    nulla rispetto all'eterno, Dante afferma
+                    che la vita di un essere umano non è che un battito di ciglia rispetto al movimento del cielo che si
+                    muove
+                    più lentamente, ossia quello delle Stelle
+                    Fisse. Cominciamo qui ad avere un'idea del sistema planetario adoperato, ossia quello
+                    Aristotelico-Tolemaico. Il movimento del cielo delle Stelle Fisse
+                    potrebbe un indizio al fatto che Dante conoscesse i moti di precessione della Terra.
+                </span>
+                <span>
+                    Continuiamo con i riferimenti all'ora e al giorno utilizzando le costellazioni. Nel secondo canto,
+                    scopriamo
+                    che:
+                </span>
+                <p class="cit">
+                    Già era 'l sole a l'orizzonte giunto<br>
+                    lo cui meridian cerchio coverchia<br>
+                    Ierusalèm col suo più alto punto;<br><br>
+                    e la notte, che opposita a lui cerchia,<br>
+                    uscia di Gange fuor con le Bilance,<br>
+                    che le caggion di man quando soverchia;<br><br>
+                    si che le bianche e le vermiglie guance,<br>
+                    là dov'i' era, de la bella Aurora<br>
+                    per troppa etate divenivan rance<br><br>
+                </p>
+                <p class="ref">[Purgatorio, II, vv 1-9]</p>
+                <span>
+                    Anche questa citazione serve ad indicare l'ora del giorno. Infatti, Dante vede il Sole tramontare
+                    sull'orizzonte del
+                    meridiano di Gerusalemme, e contemporaneamente la Luna sorgere in Bilancia, cosa che accade quando
+                    le
+                    giornate cominciano
+                    ad accorciarsi dopo l'equinozio di primavera. Nei versi successivi viene citato anche Marte:
+                </span>
+                <p class="cit">
+                    Ed ecco, qual, sorpreso dal mattino<br>
+                    per li grossi capor Marte rosseggia<br>
+                    giù nel ponente sovra 'l suol marino,<br><br>
+                    cotal m'apparve, s'io ancor lo veggia,<br>
+                    un lume per lo mar venir sì ratto,<br>
+                    che 'l muover suo nessun volar pareggia.<br><br>
+                </p>
+                <p class="ref">[Purgatorio, II, vv 13-18]</p>
+                <span>
+                    In questo caso, a sorprendere Dante non è tanto Marte, che sembra starsi poggiando sull'acqua
+                    tranquillamente, quanto l'angelo
+                    che sfreccia verso di lui rapidamente, che emana una luce sovrannaturale.
+                </span>
+                <p id="connect" class="cit">...puro e disposto a salire a le stelle.</p>
+            </div>
+
+
+        </div>
+
+        <div class="float slide">
+            <div class="float section title">
+                PARADISO
+            </div>
+            <div class="float section">
+                <span>
+                    Nonostante Dante abbia abbandonato Virgilio, personificazione della Ragione, e si sia unito a
+                    Beatrice,
+                    personificazione della Teologia, la Ragione e i riferimenti astronomici non mancano nella terza ed
+                    ultima cantica, anzi.<br>
+                    L'intero modello del Paradiso dantesco è basato sul sistema planetario proposto da Aristotele e
+                    perfezionato
+                    da Tolomeo. La più importante caratteristica di questo sistema è il fatto che esso pone la Terra al
+                    centro
+                    dell'Universo, intorno alla quale ruotano tutti i pianeti, la Luna e il Sole, ognuno in una sfera
+                    prestabilita
+                    e ad una certa velocità angolare. I cieli del Paradiso sono infatti le sfere planetarie,
+                    nell'ordine:
+                    Luna,
+                    Mercurio, Venere, Sole, Marte, Giove, Saturno, Cielo delle Stelle Fisse, Primo Mobile.<br>
+                    Ogni pianeta, all'interno del sistema aristotelico-tolemaico, si muove attraverso la composizione di
+                    moti
+                    circolari uniformi. L'orbita di ogni pianeta può essere descritta con un equante, un eccentrico, un
+                    deferente,
+                    e un epiciclo.<br><br>
+                </span>
+                <div class="flexbox">
+                    <div class="Sim" id="sim3"></div>
+                </div><br>
+                <span>
+                    Nella simulazione riportata di sopra, la Terra è il cerchio azzurro. La circonferenza che ha per
+                    centro
+                    il
+                    cerchio grigio è detta Deferente, e il cerchio grigio è l'eccentrico, in quanto si trova spostato
+                    rispetto
+                    alla Terra. La croce blu è invece l'equante, il punto opposto alla Terra rispetto all'eccentrico.
+                    Tutti
+                    e
+                    tre i punti si trovano sulla linea degli aspidi (che unisce perigeo e apogeo). Sul Deferente abbiamo
+                    l'Epiciclo,
+                    un'altra circonferenza sulla quale orbita il pianeta, in questo caso Marte. In questo modo, veniva
+                    spiegato
+                    il cosiddetto moto retrogrado:<br><br>
+                </span>
+                <div class="flexbox">
+                    <img src="Other/Apparent_retrograde_motion_of_Mars_in_2003.gif" style="width:50%"><br>
+                </div>
+                <span>
+                    Il sistema diventa sempre più preciso man mano che si aggiungono Deferenti ed Epicicli. È
+                    interessante
+                    notare come, facendo questo processo aggiungendo infinite circonferenze ognuna caratterizzata da
+                    velocità
+                    angolari diverse, avremmo una serie infinita di seni e coseni che descrivono il moto del pianeta. La
+                    stessa
+                    idea è alla base del teorema di Fourier, secondo cui ogni funzione periodica può essere scritta come
+                    la
+                    somma
+                    di seni e coseni, con i rispettivi coefficienti:
+
+                    \begin{equation}
+                    f(t) = \frac{a_0}{2} + \sum_{n=1}^{N}{[a_n·cos(nt)+b_n·sin(nt)]}
+                    \end{equation}
+
+                    Dove:
+
+                    \begin{equation}
+                    a_0 = \frac{2}{T}·\int_{-\frac{T}{2}}^{\frac{T}{2}}{f(x)dx}
+                    \end{equation}
+                    \begin{equation}
+                    a_0 = \frac{2}{T}·\int_{-\frac{T}{2}}^{\frac{T}{2}}{f(x)·cos(\frac{2\pi}{T}nx)dx}
+                    \end{equation}
+                    \begin{equation}
+                    a_0 = \frac{2}{T}·\int_{-\frac{T}{2}}^{\frac{T}{2}}{f(x)·sin(\frac{2\pi}{T}nx)dx}
+                    \end{equation}
+
+                    Inoltre, considerando le stesse equazioni che regolano Deferenti ed Epicicli ma considerando il Sole
+                    come
+                    punto fisso, notiamo come, proprio per il teorema precedente, le orbite ottenute approssimano di
+                    molto
+                    un'orbita
+                    ellittica, predetta dal modello di Keplero e dalle sue tre leggi. Di seguito un paragone tra
+                    l'ordine
+                    dei
+                    pianeti
+                    del sistema tolemaico e quello del sistema eliocentrico:<br><br>
+                </span>
+                <div class="flexbox">
+                    <div class="rowflexbox">
+                        <div class="Sim" id="sim1"></div>
+                        <div class="Sim" id="sim2"></div>
+                    </div>
+                </div><br>
+                <span>
+                    Beatrice sarà anche la personificazione della Teologia, ma propone a Dante un ragionamento logico
+                    non
+                    indifferente.
+                    Nel canto II, infatti, attraversando il Cielo della Luna, Dante spiega al lettore com'è fatto il
+                    satellite
+                    della
+                    Terra, cercando di spiegare il fenomeno delle macchie lunari. Secondo gli studiosi medioevali,
+                    queste
+                    avrebbero
+                    avuto due possibili spiegazioni:
+                </span>
+                <ol>
+                    <li>La Luna è un corpo rarefatto per tutto il suo spessore, tanto da, in alcune zone, far passare la
+                        luce del Sole</li>
+                    <li>
+                        La Luna ha un alternarsi di zone dense e zone rade, proprio come nel corpo di un animale si
+                        alternano tessuti
+                        grassi e tessuti densi. Potremmo dire che il raggio di Sole trasmesso nelle zone dense, ci
+                        apparirebbe meno luminoso
+                        perché riflesso da un punto più lontano, che ne causa la progressiva perdita della luce. La
+                        perdita
+                        massima di
+                        luminosità lungo i percorsi dove le zone dense sono più frequenti ci darebbe l'impressione di
+                        una
+                        macchia
+                    </li>
+                </ol>
+                <span>
+                    Nessuna delle due ipotesi regge sotto gli attacchi a colpi di fatti e logica di Beatrice.<br><br>
+                    Per confutare la prima ipotesi, basti pensare che durante le eclissi di Sole, quest'ultimo viene
+                    totalmente oscurato. Ciò non sarebbe possibile se considerassimo una Luna trasparente.<br><br>
+                    Per confutare la seconda ipotesi, Beatrice compie un esperimento mentale, che, facendo ricorso
+                    all'esperienza sensibile, riesce a provare la falsità della teoria.
+                </span>
+                <p class="cit">
+                    Da questa istanza può deliberarti<br>
+                    esperienza, se già mai la provi,<br>
+                    ch'esser suol fonte ai rivi di vostr'arti,<br><br>
+                    Tre specchi prenderai; e i due rimovi<br>
+                    da te d'un modo, e l'altro, più rimosso,<br>
+                    tr'ambo li primi lo occhi tuoi ritrovi.<br><br>
+                    Rivolto ad essi, fa che dopo il dosso<br>
+                    ti stea un lume che i tre specchi accenda<br>
+                    e torni a te da tutti ripercosso.<br><br>
+                    Ben che nel quanto tanto non si stenda<br>
+                    la vista più lontana, lì vedrai<br>
+                    come convien ch'igualmente risplenda.<br>
+                </p>
+                <p class="ref">[Paradiso, II, vv 94-105]</p>
+                <span>
+                    Prendendo tre specchi, ponendone due ai lati e uno, più lontano, al centro, notiamo come la luce
+                    riflessa da una fonte dietro di noi si rifletta ugualmente in tutti e tre gli specchi, senza perdere
+                    luminosità. Ecco confutata la seconda teoria.<br><br>
+                </span>
+                <div class="flexbox">
+                    <img src="Other/Esperimento.jpg" style="width:50%"><br>
+                </div>
+                <span>
+                    Ma allora, qual è la vera natura delle macchie lunari?<br>
+                    Nella nona e ultima sfera che compone il cosmo, all'interno dell'Empireo, si muove il Primo Mobile.
+                    Esso conferisce virtù, dinamica e vita all'intero Universo. Dapprima trasmette al Cielo delle Stelle
+                    Fisse
+                    la virtù universale dell'essere. Il Cielo delle Stelle Fisse, dunque, la distribuisce alla
+                    moltitudine
+                    dei
+                    lumi
+                    che lo costellano in maniera differenziata. I beati che risiedono in questo Cielo, poi, dispongono
+                    queste
+                    virtù
+                    nei sette Cieli inferiori, generando continuamente varietà a partire dalla virtù originale,
+                    producendo
+                    la
+                    diversità
+                    cosmica. In questo modo, ogni corpo è diverso dall'altro.<br><br>
+                    Il modo in cui la virtù si propaga tra i sette cieli, venendo continuamente rigenerata dai corpi che
+                    incontra è analogo
+                    al principio di Huygens, che in fisica permette alle onde bidimensionali di formare, dopo un
+                    intervallo
+                    di
+                    tempo &Delta;t,
+                    un nuovo fronte d'onda uguale al precedente. Il principio di Huygens è alla base dei fenomeni di
+                    diffrazione.<br><br>
+                </span>
+                <div class="flexbox">
+                    <img src="Other/HuygensDiffraction.svg.png" style="width:50%"><br>
+                </div>
+                <span>
+                    Le macchie lunari, oggi note come Mari, e visibili ad occhio nudo, hanno una spiegazione ben diversa
+                    dalla
+                    spiegazione
+                    metafisica data da Beatrice. Infatti, sono pianure basaltiche originate da antiche eruzioni di
+                    materiale
+                    incandescente
+                    in seguito all'impatto con dei meteoriti particolarmente massicci. Le macchie occupano il 17% della
+                    superficie, e il Mare
+                    più famoso è quello della Tranquillità, sito di atterraggio dell'Apollo 11.
+                </span>
+                <span>
+                    All'interno del Paradiso sono presenti riferimenti ad altri fenomeni astronomici. Ad esempio,
+                    abbiamo le
+                    stelle cadenti:
+                </span>
+                <p class="cit">
+                    e pare stella che tramuti loco,<br>
+                    se non che da la parte ond'e' s'accende<br>
+                    nulla sen perde, ed esso dura poco<br>
+                </p>
+                <p class="ref">[Paradiso, XV, vv 16-18]</p>
+                <span>E alle comete, che non sono altro che i beati che s'infiammano:</span>
+                <p class="cit">
+                    Così Beatrice; e quelle anime liete<br>
+                    si fero spere sopra fissi poli,<br>
+                    fiammando, volte, a guisa di comete.<br>
+                </p>
+                <p class="ref">[Paradiso, XXIV, vv 10-12]</p>
+                <span>Infine, nel descrivere il Primo Mobile e l'Empireo:</span>
+                <p class="cit">
+                    Le parti sue vivissime ed eccelse<br>
+                    sì uniforme son, ch'i' non so dire<br>
+                    qual Beatrice per loco mi scelse<br>
+                </p>
+                <p class="ref">[Paradiso, XXIV, vv 100-102]</p>
+                <p class="cit">
+                    Luce e amor d'un cerchio lui comprende,<br>
+                    sì come questo li altri; e quel precinto<br>
+                    Colui che 'l cinge solamente intende<br>
+                </p>
+                <p class="ref">[Paradiso, XXIV, vv 112-114]</p>
+                <span>
+                    Dalla descrizione di Dante del Primo Mobile, egli non riesce ad identificare il punto della sfera
+                    dal
+                    qual è
+                    entrato.
+                    Quando Dante e Beatrice si affacciano al ciel ch'è pura luce, l'Empireo, la descrizione non è quella
+                    standard medioevale:
+                    Dante si trova davanti un altro Universo fatto di nove cerchi concentrici sulle quali risiedono le
+                    schiere
+                    angeliche, che
+                    ruotano intorno a un punto infinitesimale e luminosissimo, Dio. L'Empireo non è più posto intorno al
+                    Primo
+                    Mobile, ma compone
+                    una dimensione esterna all'Universo sensibile.<br><br>
+                    Una situazione del genere non può essere spiegata considerando l'Universo dantesco uno spazio
+                    Euclideo,
+                    ma
+                    in uno spazio sferico.
+                    La Terra, in questo senso, sarebbe uno dei poli della Sfera, e il punto sarebbe l'altro polo. Tutti
+                    i
+                    paralleli a partire dalla Terra
+                    e fino all'Equatore sono le orbite dei pianeti. L'Equatore stesso è il Primo Mobile, e
+                    oltrepassandolo
+                    passiamo all'altro emisfero,
+                    i cui cerchi convergono al punto luminoso. In questo modo, Dio riesce ad essere centro dell'Universo
+                    circondandolo allo stesso tempo,
+                    "parendo inchiuso da quel ch'elli 'nchiude". La Sfera di cui si parla, tuttavia, non è una classica
+                    sfera,
+                    ma una ipersfera, descrivibile
+                    dalla matematica odierna aggiungendo all'Universo una quarta dimensione, proprio come ha fatto
+                    Einstein
+                    aggiungendo il tempo tra le
+                    dimensioni dell'Universo agli inizi del 1900.
+                </span><br><br>
+                <div class="flexbox">
+                    <img src="Other/4dSphere2.gif" style="width:50%"><br>
+                </div>
+                <p id="connect" class="cit">...l'amor che move il sole e l'altre stelle.</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+    <div class="flexbox" style="display: none;">
+
+
+
+        <p id="connect" class="cit">...puro e disposto a salire a le stelle.</p>
+
+
+
+
+
+        <h2 id="subtit">Il Paradiso</h2>
+
+        <div id="parMain" class="info">
+            <span>
+                Nonostante Dante abbia abbandonato Virgilio, personificazione della Ragione, e si sia unito a Beatrice,
+                personificazione della Teologia, la Ragione e i riferimenti astronomici non mancano nella terza ed
+                ultima
+                cantica, anzi.<br>
+                L'intero modello del Paradiso dantesco è basato sul sistema planetario proposto da Aristotele e
+                perfezionato
+                da Tolomeo. La più importante caratteristica di questo sistema è il fatto che esso pone la Terra al
+                centro
+                dell'Universo, intorno alla quale ruotano tutti i pianeti, la Luna e il Sole, ognuno in una sfera
+                prestabilita
+                e ad una certa velocità angolare. I cieli del Paradiso sono infatti le sfere planetarie, nell'ordine:
+                Luna,
+                Mercurio, Venere, Sole, Marte, Giove, Saturno, Cielo delle Stelle Fisse, Primo Mobile.<br>
+                Ogni pianeta, all'interno del sistema aristotelico-tolemaico, si muove attraverso la composizione di
+                moti
+                circolari uniformi. L'orbita di ogni pianeta può essere descritta con un equante, un eccentrico, un
+                deferente,
+                e un epiciclo.<br><br>
+            </span>
+            <div class="flexbox">
+                <div class="Sim" id="sim3"></div>
+            </div><br>
+            <span>
+                Nella simulazione riportata di sopra, la Terra è il cerchio azzurro. La circonferenza che ha per centro
+                il
+                cerchio grigio è detta Deferente, e il cerchio grigio è l'eccentrico, in quanto si trova spostato
+                rispetto
+                alla Terra. La croce blu è invece l'equante, il punto opposto alla Terra rispetto all'eccentrico. Tutti
+                e
+                tre i punti si trovano sulla linea degli aspidi (che unisce perigeo e apogeo). Sul Deferente abbiamo
+                l'Epiciclo,
+                un'altra circonferenza sulla quale orbita il pianeta, in questo caso Marte. In questo modo, veniva
+                spiegato
+                il cosiddetto moto retrogrado:<br><br>
+            </span>
+            <div class="flexbox">
+                <img src="Other/Apparent_retrograde_motion_of_Mars_in_2003.gif" style="width:50%"><br>
+            </div>
+            <span>
+                Il sistema diventa sempre più preciso man mano che si aggiungono Deferenti ed Epicicli. È interessante
+                notare come, facendo questo processo aggiungendo infinite circonferenze ognuna caratterizzata da
+                velocità
+                angolari diverse, avremmo una serie infinita di seni e coseni che descrivono il moto del pianeta. La
+                stessa
+                idea è alla base del teorema di Fourier, secondo cui ogni funzione periodica può essere scritta come la
+                somma
+                di seni e coseni, con i rispettivi coefficienti:
+
+                \begin{equation}
+                f(t) = \frac{a_0}{2} + \sum_{n=1}^{N}{[a_n·cos(nt)+b_n·sin(nt)]}
+                \end{equation}
+
+                Dove:
+
+                \begin{equation}
+                a_0 = \frac{2}{T}·\int_{-\frac{T}{2}}^{\frac{T}{2}}{f(x)dx}
+                \end{equation}
+                \begin{equation}
+                a_0 = \frac{2}{T}·\int_{-\frac{T}{2}}^{\frac{T}{2}}{f(x)·cos(\frac{2\pi}{T}nx)dx}
+                \end{equation}
+                \begin{equation}
+                a_0 = \frac{2}{T}·\int_{-\frac{T}{2}}^{\frac{T}{2}}{f(x)·sin(\frac{2\pi}{T}nx)dx}
+                \end{equation}
+
+                Inoltre, considerando le stesse equazioni che regolano Deferenti ed Epicicli ma considerando il Sole
+                come
+                punto fisso, notiamo come, proprio per il teorema precedente, le orbite ottenute approssimano di molto
+                un'orbita
+                ellittica, predetta dal modello di Keplero e dalle sue tre leggi. Di seguito un paragone tra l'ordine
+                dei
+                pianeti
+                del sistema tolemaico e quello del sistema eliocentrico:<br><br>
+            </span>
+            <div class="flexbox">
+                <div class="rowflexbox">
+                    <div class="Sim" id="sim1"></div>
+                    <div class="Sim" id="sim2"></div>
+                </div>
+            </div><br>
+        </div>
+        <br>
+        <div id="parMain2" class="info">
+            <span>
+                Beatrice sarà anche la personificazione della Teologia, ma propone a Dante un ragionamento logico non
+                indifferente.
+                Nel canto II, infatti, attraversando il Cielo della Luna, Dante spiega al lettore com'è fatto il
+                satellite
+                della
+                Terra, cercando di spiegare il fenomeno delle macchie lunari. Secondo gli studiosi medioevali, queste
+                avrebbero
+                avuto due possibili spiegazioni:
+            </span>
+            <ol>
+                <li>La Luna è un corpo rarefatto per tutto il suo spessore, tanto da, in alcune zone, far passare la
+                    luce del Sole</li>
+                <li>
+                    La Luna ha un alternarsi di zone dense e zone rade, proprio come nel corpo di un animale si
+                    alternano tessuti
+                    grassi e tessuti densi. Potremmo dire che il raggio di Sole trasmesso nelle zone dense, ci
+                    apparirebbe meno luminoso
+                    perché riflesso da un punto più lontano, che ne causa la progressiva perdita della luce. La perdita
+                    massima di
+                    luminosità lungo i percorsi dove le zone dense sono più frequenti ci darebbe l'impressione di una
+                    macchia
+                </li>
+            </ol>
+            <span>
+                Nessuna delle due ipotesi regge sotto gli attacchi a colpi di fatti e logica di Beatrice.<br><br>
+                Per confutare la prima ipotesi, basti pensare che durante le eclissi di Sole, quest'ultimo viene
+                totalmente oscurato. Ciò non sarebbe possibile se considerassimo una Luna trasparente.<br><br>
+                Per confutare la seconda ipotesi, Beatrice compie un esperimento mentale, che, facendo ricorso
+                all'esperienza sensibile, riesce a provare la falsità della teoria.
+            </span>
+            <p class="cit">
+                Da questa istanza può deliberarti<br>
+                esperienza, se già mai la provi,<br>
+                ch'esser suol fonte ai rivi di vostr'arti,<br>
+                Tre specchi prenderai; e i due rimovi<br>
+                da te d'un modo, e l'altro, più rimosso,<br>
+                tr'ambo li primi lo occhi tuoi ritrovi.<br>
+                Rivolto ad essi, fa che dopo il dosso<br>
+                ti stea un lume che i tre specchi accenda<br>
+                e torni a te da tutti ripercosso.<br>
+                Ben che nel quanto tanto non si stenda<br>
+                la vista più lontana, lì vedrai<br>
+                come convien ch'igualmente risplenda.<br>
+            </p>
+            <p class="ref">[Paradiso, II, vv 94-105]</p>
+            <span>
+                Prendendo tre specchi, ponendone due ai lati e uno, più lontano, al centro, notiamo come la luce
+                riflessa da una fonte dietro di noi si rifletta ugualmente in tutti e tre gli specchi, senza perdere
+                luminosità. Ecco confutata la seconda teoria.<br><br>
+            </span>
+            <div class="flexbox">
+                <img src="Other/Esperimento.jpg" style="width:50%"><br>
+            </div>
+            <span>
+                Ma allora, qual è la vera natura delle macchie lunari?<br>
+                Nella nona e ultima sfera che compone il cosmo, all'interno dell'Empireo, si muove il Primo Mobile.
+                Esso conferisce virtù, dinamica e vita all'intero Universo. Dapprima trasmette al Cielo delle Stelle
+                Fisse
+                la virtù universale dell'essere. Il Cielo delle Stelle Fisse, dunque, la distribuisce alla moltitudine
+                dei
+                lumi
+                che lo costellano in maniera differenziata. I beati che risiedono in questo Cielo, poi, dispongono
+                queste
+                virtù
+                nei sette Cieli inferiori, generando continuamente varietà a partire dalla virtù originale, producendo
+                la
+                diversità
+                cosmica. In questo modo, ogni corpo è diverso dall'altro.<br><br>
+                Il modo in cui la virtù si propaga tra i sette cieli, venendo continuamente rigenerata dai corpi che
+                incontra è analogo
+                al principio di Huygens, che in fisica permette alle onde bidimensionali di formare, dopo un intervallo
+                di
+                tempo &Delta;t,
+                un nuovo fronte d'onda uguale al precedente. Il principio di Huygens è alla base dei fenomeni di
+                diffrazione.<br><br>
+            </span>
+            <div class="flexbox">
+                <img src="Other/HuygensDiffraction.svg.png" style="width:50%"><br>
+            </div>
+            <span>
+                Le macchie lunari, oggi note come Mari, e visibili ad occhio nudo, hanno una spiegazione ben diversa
+                dalla
+                spiegazione
+                metafisica data da Beatrice. Infatti, sono pianure basaltiche originate da antiche eruzioni di materiale
+                incandescente
+                in seguito all'impatto con dei meteoriti particolarmente massicci. Le macchie occupano il 17% della
+                superficie, e il Mare
+                più famoso è quello della Tranquillità, sito di atterraggio dell'Apollo 11.
+            </span>
+        </div>
+        <br>
+        <div id="parSec1" class="info">
+            <span>
+                All'interno del Paradiso sono presenti riferimenti ad altri fenomeni astronomici. Ad esempio, abbiamo le
+                stelle cadenti:
+            </span>
+            <p class="cit">
+                e pare stella che tramuti loco,<br>
+                se non che da la parte ond'e' s'accende<br>
+                nulla sen perde, ed esso dura poco<br>
+            </p>
+            <p class="ref">[Paradiso, XV, vv 16-18]</p>
+            <span>E alle comete, che non sono altro che i beati che s'infiammano:</span>
+            <p class="cit">
+                Così Beatrice; e quelle anime liete<br>
+                si fero spere sopra fissi poli,<br>
+                fiammando, volte, a guisa di comete.<br>
+            </p>
+            <p class="ref">[Paradiso, XXIV, vv 10-12]</p>
+        </div>
+        <br>
+        <div id="parSec2" class="info">
+            <span>Infine, nel descrivere il Primo Mobile e l'Empireo:</span>
+            <p class="cit">
+                Le parti sue vivissime ed eccelse<br>
+                sì uniforme son, ch'i' non so dire<br>
+                qual Beatrice per loco mi scelse<br>
+            </p>
+            <p class="ref">[Paradiso, XXIV, vv 100-102]</p>
+            <p class="cit">
+                Luce e amor d'un cerchio lui comprende,<br>
+                sì come questo li altri; e quel precinto<br>
+                Colui che 'l cinge solamente intende<br>
+            </p>
+            <p class="ref">[Paradiso, XXIV, vv 112-114]</p>
+            <span>
+                Dalla descrizione di Dante del Primo Mobile, egli non riesce ad identificare il punto della sfera dal
+                qual è
+                entrato.
+                Quando Dante e Beatrice si affacciano al ciel ch'è pura luce, l'Empireo, la descrizione non è quella
+                standard medioevale:
+                Dante si trova davanti un altro Universo fatto di nove cerchi concentrici sulle quali risiedono le
+                schiere
+                angeliche, che
+                ruotano intorno a un punto infinitesimale e luminosissimo, Dio. L'Empireo non è più posto intorno al
+                Primo
+                Mobile, ma compone
+                una dimensione esterna all'Universo sensibile.<br><br>
+                Una situazione del genere non può essere spiegata considerando l'Universo dantesco uno spazio Euclideo,
+                ma
+                in uno spazio sferico.
+                La Terra, in questo senso, sarebbe uno dei poli della Sfera, e il punto sarebbe l'altro polo. Tutti i
+                paralleli a partire dalla Terra
+                e fino all'Equatore sono le orbite dei pianeti. L'Equatore stesso è il Primo Mobile, e oltrepassandolo
+                passiamo all'altro emisfero,
+                i cui cerchi convergono al punto luminoso. In questo modo, Dio riesce ad essere centro dell'Universo
+                circondandolo allo stesso tempo,
+                "parendo inchiuso da quel ch'elli 'nchiude". La Sfera di cui si parla, tuttavia, non è una classica
+                sfera,
+                ma una ipersfera, descrivibile
+                dalla matematica odierna aggiungendo all'Universo una quarta dimensione, proprio come ha fatto Einstein
+                aggiungendo il tempo tra le
+                dimensioni dell'Universo agli inizi del 1900.
+            </span>
+            <div class="flexbox">
+                <img src="Other/4dSphere.gif" style="width:50%"><br>
+            </div>
+        </div>
+
+        <p id="connect" class="cit">...l'amor che move il sole e l'altre stelle.</p>
+
+        <script src="index.js" defer></script>
+
+    </div>
+
+</body>
+
+</html>
